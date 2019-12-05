@@ -1,11 +1,11 @@
 # svelte app
 
-This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/freedmand/template-svelte.
+This is a project template for [Svelte](https://svelte.dev) apps. It lives at https://github.com/freedmand/svelte-template.
 
 To create a new project based on this template using [degit](https://github.com/Rich-Harris/degit):
 
 ```bash
-npx degit freedmand/template-svelte svelte-app
+npx degit freedmand/svelte-template svelte-app
 cd svelte-app
 ```
 
