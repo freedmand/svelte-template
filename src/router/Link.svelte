@@ -18,7 +18,12 @@
   $: toPath = getPath();
   $: active = $resolvedRoute.name == to;
 
-  function nav() {
+  function nav(e) {
+    // Don't programmatically nav if any modifier key is pressed
+    if (e.metaKey || e.altKey || e.ctrlKey || e.shiftKey) return;
+
+    e.preventDefault();
+
     // change current router path
     currentUrl.set(toPath);
     // push the path into web browser history API
@@ -36,6 +41,6 @@
   }
 </style>
 
-<a class:active href={toPath} on:click|preventDefault={nav}>
+<a class:active href={toPath} on:click={nav}>
   <slot />
 </a>

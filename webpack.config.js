@@ -2,6 +2,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const autoPreprocess = require('svelte-preprocess');
 const { preprocessOptions } = require('./preprocess.config.js');
+const DotenvFlow = require('dotenv-flow-webpack');
 
 const mode = process.env.NODE_ENV || 'development';
 const prod = mode === 'production';
@@ -63,7 +64,10 @@ module.exports = {
       {
         test: /\.svg$/,
         use: [
-          'svg-inline-loader'
+          {
+            loader: 'svg-inline-loader',
+            options: { removeSVGTagAttrs: false }
+          }
         ]
       }
     ]
@@ -73,6 +77,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'bundle.css'
     }),
+    new DotenvFlow()
   ],
   devtool: prod ? false : 'source-map',
   devServer: {
