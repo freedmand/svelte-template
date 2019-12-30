@@ -13,7 +13,3 @@ export const api = new Svue({
     }
   }
 });
-
-export const API = {
-
-};
