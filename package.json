@@ -17,7 +17,7 @@
     "svelte-preprocess": "^3.2.6",
     "svelte-preprocess-sass": "^0.2.0",
     "svg-inline-loader": "^0.8.0",
-    "svue": "^1.0.0",
+    "svue": "^1.2.0",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.0",
     "webpack-dev-server": "^3.3.1"
