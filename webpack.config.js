@@ -14,7 +14,6 @@ module.exports = {
   resolve: {
     alias: {
       svelte: path.resolve('node_modules', 'svelte'),
-      routerlink: '@spaceavocado/svelte-router/component/link',
       '@': path.resolve(__dirname, 'src'),
     },
     extensions: ['*', '.mjs', '.js', '.svelte', '.scss'],
